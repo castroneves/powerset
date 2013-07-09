@@ -25,7 +25,7 @@ public class Powerset<T> {
             return result;
         }
 
-        T head = input.remove(0);
+        T head = new ArrayList<T>(input).remove(0);
         Set<Set<T>> tailPowerset = findPowersetRecursive(input);
         result.addAll(tailPowerset);
         for(Set<T> tailSet : tailPowerset){
